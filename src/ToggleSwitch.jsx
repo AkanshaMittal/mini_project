@@ -5,7 +5,7 @@ export const ToggleSwitch = () => {
   const [isOpen, setOpen] = useState(false);
 
   const styling = { width: "187px", height: "182px", marginLeft: "200px" };
-  const condition=isOpen ? "ON" : "OFF"
+  
 
   const handleClick = () => {
     setOpen(!isOpen);
@@ -15,8 +15,8 @@ export const ToggleSwitch = () => {
     <div className="container" style={{ backgroundColor: isOpen ? "#FFED29" : "white" }}>
       <div className="toggle-switch" onClick={handleClick}>
         <div></div>
-        <div className={`switch ${condition}`}>
-          {condition}
+        <div className={`switch ${isOpen ? "ON" : "OFF"}`}>
+          {isOpen ? "ON" : "OFF"}
           <span className="switch-state"></span>
         </div>
         <img src={isOpen ? "ONButton.jpg" : "OFFButton.jpg"} style={styling} alt="Toggle Button" />
