@@ -15,6 +15,11 @@ export const ToggleSwitch = () => {
       const now = new Date();
       const formattedDate = now.toLocaleDateString();
       const formattedTime = now.toLocaleTimeString();
+      const hour = now.getHours();
+      console.log("hour",hour);
+      const isOn=hour>=6&&hour<18
+      {isOn?setOpen(false):setOpen(true)}
+
       setDatetime(`${formattedDate} ${formattedTime}`);
     };
 
